@@ -1,7 +1,7 @@
 {
   "name": "spotify-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "React App interacting with the Spotify API",
   "main": "index.js",
   "scripts": {
     "start": "npm run build-client && node ./",
@@ -11,7 +11,7 @@
     "start-client": "npm run build && live-server client/dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kieran McManus",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.2.2",
