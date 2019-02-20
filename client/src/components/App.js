@@ -11,7 +11,7 @@ class App extends Component {
   state = { artist: null, tracks: [] };
 
   searchArtist = artistQuery => {
-    fetch(`${API_ADDRESS}/artist/${artistQuery}`)
+    fetch(`${document.location.origin}/artist/${artistQuery}`)
       .then(response => response.json())
       .then(json => {
         if (json.artists.total > 0) {
@@ -32,8 +32,8 @@ class App extends Component {
     return (
       <div>
         <div className="App-title">
-          <img className="react-logo" src="../assets/reactlogo.png" alt="react-logo"/>  with
-          <img className ="spotify-logo" src="../spotify.png" alt ="spotify-logo"/>
+          <img className="react-logo" src={reactlogo} alt="react-logo"/>  with
+          <img className ="spotify-logo" src={spotify} alt ="spotify-logo"/>
         </div>
         <Search searchArtist={this.searchArtist} />
         <Artist artist={this.state.artist} />

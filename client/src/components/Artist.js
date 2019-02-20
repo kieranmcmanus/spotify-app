@@ -7,9 +7,6 @@ const Artist = ({ artist }) => {
 
   return (
     <div>
-      <h3>{name}</h3>
-      <p>{followers.total} followers</p>
-      <p>{genres.join(',')}</p>
       <img
         src={images[0] && images[0].url}
         alt='artist-profile'
@@ -17,9 +14,13 @@ const Artist = ({ artist }) => {
           width: 200,
           height: 200,
           borderRadius: 100,
-          objectFit: 'cover'
+          objectFit: 'cover',
+          margin: 25
         }}
       />
+      <h2>{name}</h2>
+      <p className="followers">{followers.total} followers</p>
+      <p className="genres">{genres.join(',')}</p>
     </div>
   )
 }
