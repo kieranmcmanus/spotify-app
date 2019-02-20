@@ -12,8 +12,8 @@ app.use((req, res, next) => {
 
 app.use(express.static(path.join(__dirname, 'client/dist')));
 
-const ID = process.env.SPOTIFY_CLIENT_ID || '603cf2f0cb6e4d0495ac617025025ed9';
-const SECRET = process.env.SPOTIFY_CLIENT_SECRET || '21e49a38c81f44bc83a56ffe58576206';
+const ID = process.env.SPOTIFY_CLIENT_ID;
+const SECRET = process.env.SPOTIFY_CLIENT_SECRET;
 
 const AUTHORIZATION_HEADER = base64.encode(`${ID}:${SECRET}`);
 const BASE_SPOTIFY_ADDRESS = 'https://api.spotify.com/v1';

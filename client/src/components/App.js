@@ -5,8 +5,6 @@ import Tracks from './Tracks';
 import reactlogo from '../assets/reactlogo.png';
 import spotify from '../assets/spotify.png';
 
-const API_ADDRESS = 'http://localhost:3000';
-
 class App extends Component {
   state = { artist: null, tracks: [] };
 
@@ -19,7 +17,7 @@ class App extends Component {
 
           this.setState({ artist });
 
-          fetch(`${API_ADDRESS}/artist/${artist.id}/top-tracks`)
+          fetch(`${document.location.origin}/artist/${artist.id}/top-tracks`)
             .then(response => response.json())
             .then(json => this.setState({ tracks: json.tracks }))
             .catch(error => alert(error.message));
