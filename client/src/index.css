@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Open Sans';
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto';
+}
+
+button {
+  background-color: #E80D53;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.App-title {
+  font-size: 26px;
+  margin: 10px;
+}
+
+.spotify-logo, .react-logo {
+  height: 50px;
+  margin: 10px;
+}
+
+.track {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.track-image {
+  width: 250px;
+  height: 250px;
+}
+
+.track-text {
+  position: absolute;
+  width: 250px;
+  bottom: 0px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
+.track-icon {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  color: white;
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  padding: 10px;
+  opacity: 0.8;
+}
